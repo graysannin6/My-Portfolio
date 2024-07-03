@@ -1,0 +1,43 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "February 2024 - April 2024",
+    title:
+      "3C Programmer - Ubisoft University Competition 2024 (A Twin's Dream)",
+    company: "Université Laval, Quebec-Montreal",
+    description: [
+      "Developed a two-player cooperative game as part of the Ubisoft University Competition 2024.",
+      "Mainly contributed to 3C programming, utilizing C++ and Blueprint on Unreal Engine 5, with a focus on <strong>enhancing gameplay and player interaction</strong>.",
+      "Implemented core character controls, camera systems, and character interactions to <strong>create a seamless and engaging co-op experience</strong>.",
+      "Collaborated with team members to integrate art assets, animations, and sound effects, ensuring a <strong>cohesive and polished final product</strong>.",
+      "Optimized performance by profiling and refining code, reducing latency and improving <strong>frame rates for a smoother gameplay experience</strong>.",
+      "Participated in team meetings and playtesting sessions, providing feedback and <strong>suggesting improvements to game mechanics</strong> and overall design.",
+    ],
+  },
+  {
+    date: "October 2023 - February 2024",
+    title: "UE5 Gameplay Programmer",
+    company: "Insanity CORR ltd",
+    description: [
+      "Refined item pickup management: Replaced a method based on a joint constraint with a solution that <strong>improves replication and collision predictability</strong>. Utilized Unreal Engine's physics system to implement a more deterministic approach for networked multiplayer scenarios.",
+      "Improved multiplayer stability: Integrated a <strong>reliable collision management system</strong> using Unreal Engine's replication system and custom collision handlers to ensure picked-up objects behave consistently and without bugs across all clients.",
+      "Optimized gameplay: Translated player character blueprints from Unreal Engine to <strong>C++ for better performance and flexibility</strong>, reducing overhead and enabling more complex gameplay mechanics.",
+      "Collaborated with game designers: Actively participated in the creation of <strong>innovative game mechanics</strong> by working closely with the design team to prototype and iterate on new gameplay features, ensuring they were both fun and technically feasible.",
+      "Debugged and resolved issues: Identified and fixed bugs using Unreal Engine's debugging tools and logging system to <strong>maintain a smooth and immersive user experience</strong>. Conducted extensive playtesting to catch edge cases and ensure robustness.",
+      "Contributed to team meetings: Discussed progress and challenges in regular sync-ups, providing <strong>solutions for the continuous optimization</strong> of game performance. Offered insights based on profiling and performance analysis to improve overall game efficiency.",
+    ],
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li>
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
